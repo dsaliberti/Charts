@@ -19,12 +19,13 @@ let package = Package(
             targets: ["DGCharts"])
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-algorithms", from: "1.0.0")
+        .package(url: "https://github.com/apple/swift-algorithms", from: "0.2.1")
     ],
     targets: [
         .target(
             name: "DGCharts",
-            dependencies: [.product(name: "Algorithms", package: "swift-algorithms")]
+            dependencies: [.product(name: "Algorithms", package: "swift-algorithms")],
+            path: "Charts"
         )
     ],
     swiftLanguageVersions: [.v5]

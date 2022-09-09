@@ -9,7 +9,7 @@
 #if canImport(UIKit)
     import UIKit
 #endif
-import Charts
+import DGCharts
 #if canImport(UIKit)
     import UIKit
 #endif
@@ -45,11 +45,11 @@ class CombinedChartViewController: DemoBaseViewController {
         chartView.highlightFullBarEnabled = false
         
         
-        chartView.drawOrder = [DrawOrder.bar.rawValue,
-                               DrawOrder.bubble.rawValue,
-                               DrawOrder.candle.rawValue,
-                               DrawOrder.line.rawValue,
-                               DrawOrder.scatter.rawValue]
+      chartView.drawOrder = [CombinedChartView.DrawOrder.bar.rawValue,
+                             CombinedChartView.DrawOrder.bubble.rawValue,
+                             CombinedChartView.DrawOrder.candle.rawValue,
+                             CombinedChartView.DrawOrder.line.rawValue,
+                             CombinedChartView.DrawOrder.scatter.rawValue]
         
         let l = chartView.legend
         l.wordWrapEnabled = true
